@@ -21,3 +21,4 @@
 	rsh = reset HEAD
 [core]
 	pager = less -x1,5
+	excludesfile = /Users/matthew/.gitignore_global
