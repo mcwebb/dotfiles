@@ -15,6 +15,7 @@
 	dc = diff --cached
 	co = checkout
 	cob = checkout -b
+	cod = checkout --
 	l = log --graph --pretty=geerling
 	a = add
 	ap = add --patch
