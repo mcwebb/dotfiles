@@ -118,3 +118,6 @@ complete -F _complete_hosts host
 # Only show the current directory's name in the tab
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
 
+function homestead() {
+    ( cd ~/Workspace/united/homestead && vagrant $* )
+}
