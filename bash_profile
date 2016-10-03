@@ -118,6 +118,9 @@ complete -F _complete_hosts host
 # Only show the current directory's name in the tab
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
 
+# Add texlive binaries to path
+export PATH="$PATH:/usr/local/texlive/2016basic/bin/x86_64-darwin"
+
 function homestead() {
     ( cd ~/Workspace/united/homestead && vagrant $* )
 }
