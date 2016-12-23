@@ -120,6 +120,8 @@ export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
 
 # Add texlive binaries to path
 export PATH="$PATH:/usr/local/texlive/2016basic/bin/x86_64-darwin"
+# Add android tool binaries to path
+export PATH="$PATH:~/Library/Android/sdk/tools:~/Library/Android/sdk/build-tools/24.0.3"
 
 function homestead() {
     ( cd ~/Workspace/united/homestead && vagrant $* )
