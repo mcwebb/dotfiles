@@ -2,7 +2,7 @@
 	email = matthewowebb@gmail.com
 	name = Matthew Webb
 [push]
-	default = matching
+	default = simple
 [pretty]
 	geerling = %Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset
 [alias]
@@ -19,6 +19,7 @@
 	l = log --graph --pretty=geerling
 	a = add
 	ap = add --patch
+	rs = reset
 	rsh = reset HEAD
 [core]
 	pager = less -x1,5
