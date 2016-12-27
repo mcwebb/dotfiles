@@ -95,6 +95,11 @@ if [[ `which grunt` ]]; then
   eval "$(grunt --completion=bash)"
 fi
 
+# Autocomplete for Git
+if [ -f ~/.git-completion.sh ]; then
+  . ~/.git-completion.sh
+fi
+
 # /etc/profile.d/complete-hosts.sh
 # Autocomplete Hostnames for SSH etc.
 # By Jean-Sebastien Morisset (http://surniaulula.com/).
