@@ -1,4 +1,10 @@
 # Install
+## Install helpers
+```
+brew install bash-completion
+```
+
+## Link config
 ```
 ln -s ~/Workspace/mcwebb/dotfiles/bash_aliases ~/.bash_aliases
 ln -s ~/Workspace/mcwebb/dotfiles/bash_profile ~/.bash_profile
