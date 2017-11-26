@@ -11,16 +11,21 @@
 	ca = commit -a
 	cm = commit -m
 	cam = commit -am
+	cp = cherry-pick
 	d = diff
 	dc = diff --cached
 	co = checkout
 	cob = checkout -b
+	b = branch
 	cod = checkout --
 	l = log --graph --pretty=geerling
 	a = add
 	ap = add --patch
 	rs = reset
 	rsh = reset HEAD
+	rewrite = rebase -i --autosquash
+	count = rev-list --count HEAD
 [core]
 	pager = less -x1,5
 	excludesfile = /Users/matthew/.gitignore_global
+	editor = /usr/bin/vim
