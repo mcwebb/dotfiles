@@ -20,7 +20,7 @@ fi
 if tput setaf 1 &> /dev/null; then
   tput sgr0
   if [[ $(tput colors) -ge 256 ]] 2>/dev/null; then
-    BLACK=$(tput setaf 190)
+    BLACK="\033[36m"
     MAGENTA=$(tput setaf 9)
     ORANGE=$(tput setaf 172)
     GREEN=$(tput setaf 190)
@@ -37,7 +37,7 @@ if tput setaf 1 &> /dev/null; then
   BOLD=$(tput bold)
   RESET=$(tput sgr0)
 else
-  BLACK="\033[01;30m"
+  BLACK="\033[1;30m"
   MAGENTA="\033[1;31m"
   ORANGE="\033[1;33m"
   GREEN="\033[1;32m"
@@ -58,9 +58,9 @@ export RESET
 
 # Change this symbol to something sweet.
 # http://en.wikipedia.org/wiki/Unicode_symbols
-symbol="⚡  "
+symbol="➤ "
 
-export PS1="\[${BOLD}${MAGENTA}\]\u \[$WHITE\]in \[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]\n$symbol\[$RESET\]"
+export PS1="\[$MAGENTA\][\t] \[$GREEN\]\w\[$RESET\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parse_git_branch)\[$RESET\]\n$symbol\[$RESET\]"
 export PS2="\[$ORANGE\]→ \[$RESET\]"
 
 # Always enable GREP colors:
@@ -126,7 +126,10 @@ export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
 # Add texlive binaries to path
 export PATH="$PATH:/usr/local/texlive/2016basic/bin/x86_64-darwin"
 # Add android tool binaries to path
-export PATH="$PATH:~/Library/Android/sdk/tools:~/Library/Android/sdk/build-tools/24.0.3"
+export ANDROID_HOME="/Users/matthew/Library/Android/sdk"
+export PATH="$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANDROID_HOME/build-tools/24.0.3"
+# Add local python bins onto path
+# export PATH="$PATH:~/Library/Python/2.7/bin"
 
 function homestead() {
     ( cd ~/Workspace/united/homestead && vagrant $* )
