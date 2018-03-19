@@ -126,7 +126,7 @@ export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
 # Add texlive binaries to path
 export PATH="$PATH:/usr/local/texlive/2016basic/bin/x86_64-darwin"
 # Add android tool binaries to path
-export ANDROID_HOME="/Users/matthew/Library/Android/sdk"
+export ANDROID_HOME="$HOME/Library/Android/sdk"
 export PATH="$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANDROID_HOME/build-tools/24.0.3"
 # Add local python bins onto path
 # export PATH="$PATH:~/Library/Python/2.7/bin"
