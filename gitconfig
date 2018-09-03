@@ -19,6 +19,7 @@
 	b = branch
 	cod = checkout --
 	l = log --graph --pretty=geerling
+  history = log --graph --abbrev-commit --decorate  --first-parent
 	a = add
 	ap = add --patch
 	rs = reset
